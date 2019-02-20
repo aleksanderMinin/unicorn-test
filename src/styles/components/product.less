@@ -1,0 +1,34 @@
+.Product {
+
+  &-Header {
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    &Img {
+      height: 100%;
+    }
+
+    &Controls {
+      display: flex;
+      margin: 20px;
+      justify-content: center;
+      flex-direction: column;
+
+      &Count {
+        display: block;
+        .bordered-mixin();
+        margin-bottom: 15px;
+        padding: 8px;
+      }
+
+      &Buy {
+        .button-mixin();
+        font-weight: 600;
+        color: @main-color;
+        padding: 8px;
+      }
+    }
+  }
+}

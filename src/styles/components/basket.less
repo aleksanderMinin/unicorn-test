@@ -1,0 +1,76 @@
+.Basket {
+  height: 100px;
+  width: 300px;
+  .bordered-mixin();
+  word-wrap: break-word;
+  overflow-x: auto;
+  cursor: pointer;
+
+  &-Card {
+    padding: 10px;
+
+    p {
+      margin: unset;
+    }
+  }
+
+  &-List {
+    position: absolute;
+    top: 94%;
+    width: inherit;
+    .bordered-mixin();
+    background-color: @main-color;
+    cursor: default;
+
+    &_hidden {
+      display: none;
+    }
+
+    &Items {
+      max-height: 200px;
+      overflow-x: auto;
+    }
+
+    &Item {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      padding: 10px;
+
+      &:not(:last-child) {
+        border-bottom: 1px solid rgb(187, 187, 187);
+      }
+
+      &:hover {
+        background-color: @main-color - 20;
+      }
+
+      input {
+        min-width: 30px;
+        width: 20%;
+        margin: 0px 10px;
+        text-align: right;
+        .bordered-mixin();
+      }
+
+      button {
+        .button-mixin();
+        background-color: @main-color;
+        color:red;
+      }
+    }
+
+    &Footer {
+      padding: 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-top: 2px solid @border-color;
+
+      button {
+        .button-mixin();
+      }
+    }
+  }
+
+}

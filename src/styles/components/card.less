@@ -1,0 +1,22 @@
+.card {
+  display: inline-flex;
+  .bordered-mixin();
+  margin: 8px;
+  font-style: normal;
+  width: 100px;
+  height: 100px;
+
+  &-link {
+    display: flex;
+    height: 100%;
+    width: 100%;
+
+    div {
+      margin: auto;
+    }
+  }
+
+  &:hover {
+    background-color: @main-color - 20;
+  }
+}
